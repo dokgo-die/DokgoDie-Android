@@ -52,7 +52,7 @@ class UploadActivity : ComponentActivity() {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 TopBar(text = "상품 업로드", isNeedBackPressButton = true, onClick = {
-
+                    finish()
                 })
                 Spacer(modifier = Modifier.size(8.dp))
                 if (videoUri.value == null) {
