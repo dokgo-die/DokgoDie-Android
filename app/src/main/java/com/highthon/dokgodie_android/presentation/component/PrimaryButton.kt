@@ -26,7 +26,7 @@ fun PrimaryButton(
     onClick: () -> Unit
 ) {
     Button(
-        onClick = { if (isClickable) onClick },
+        onClick = { if (isClickable) onClick() },
         modifier = modifier
             .fillMaxWidth()
             .height(46.dp)
