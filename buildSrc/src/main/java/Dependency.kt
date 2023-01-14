@@ -49,5 +49,8 @@ object Dependency {
         const val COIL = "io.coil-kt:coil-compose:${Versions.COIL}"
         const val EXOPLAYER =
             "com.google.android.exoplayer:exoplayer:${Versions.EXOPLAYER}"
+        const val PAGER = "com.google.accompanist:accompanist-pager:${Versions.PAGER}"
+        const val PAGER_INDICATOR = "com.google.accompanist:accompanist-pager-indicators:${Versions.PAGER}"
+
     }
 }
