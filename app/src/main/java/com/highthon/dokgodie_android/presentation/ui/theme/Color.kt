@@ -15,9 +15,9 @@ val Black200 = Color(0xFF2C2C30)
 val Gray300 = Color(0xFF68686C)
 val Gray400 = Color(0xFFCCCCD6)
 
-// write
-val Write500 = Color(0xFFF2F2F2)
-val Write600 = Color(0xFFFFFFFF)
+// white
+val White500 = Color(0xFFF2F2F2)
+val White600 = Color(0xFFFFFFFF)
 
 // primary
 val PrimaryColor = Color(0xFF37D781)
