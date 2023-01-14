@@ -14,6 +14,8 @@ object Dependency {
         const val COMPOSE_PREVIEW = "androidx.compose.ui:ui-tooling-preview:${Versions.COMPOSE}"
         const val COMPOSE_MATERIAL =
             "androidx.compose.material:material:${Versions.COMPOSE_MATERIAL}"
+        const val COMPOSE_ICON =
+            "androidx.compose.material:material-icons-extended:${Versions.COMPOSE}"
     }
 
     object AndroidX {
