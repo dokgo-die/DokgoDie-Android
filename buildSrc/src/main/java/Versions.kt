@@ -24,6 +24,4 @@ object Versions {
 
     const val COIL = "2.2.2"
     const val EXOPLAYER = "2.18.1"
-
-    const val PAGER = "0.20.1"
 }
