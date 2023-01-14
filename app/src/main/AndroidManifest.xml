@@ -17,7 +17,7 @@
         <activity
             android:name=".presentation.feature_intro.IntroActivity"
             android:exported="true"
-            android:label="@string/title_activity_intro"
+            android:label="@string/app_name"
             android:theme="@style/Theme.DokgoDieAndroid">
             <meta-data
                 android:name="android.app.lib_name"
