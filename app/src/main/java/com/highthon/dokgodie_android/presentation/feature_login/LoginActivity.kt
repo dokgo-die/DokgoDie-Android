@@ -28,7 +28,8 @@ class LoginActivity : ComponentActivity() {
                             "시작하기 전 로그인을 해주세요!",
                     fontSize = 22.sp,
                     fontWeight = FontWeight(700),
-                    color = Black100
+                    color = Black100,
+                    modifier = Modifier
                 )
             }
         }
