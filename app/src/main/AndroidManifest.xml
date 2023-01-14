@@ -13,9 +13,9 @@
         android:theme="@style/Theme.DokgoDieAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.feature_login.LoginActivity"
+            android:name=".presentation.feature_intro.IntroActivity"
             android:exported="true"
-            android:label="@string/title_activity_login"
+            android:label="@string/title_activity_intro"
             android:theme="@style/Theme.DokgoDieAndroid">
             <meta-data
                 android:name="android.app.lib_name"
@@ -27,12 +27,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".presentation.feature_login.LoginActivity"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.DokgoDieAndroid">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+        </activity>
+        <activity
             android:name=".presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.DokgoDieAndroid">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
