@@ -14,7 +14,7 @@ val Black200 = Color(0xFF2C2C30)
 // gray
 val Gray300 = Color(0xFF68686C)
 val Gray400 = Color(0xFFCCCCD6)
-val Gray500 = Color(0xFFF2F2F2)
+val TransparentGray300 = Color(0x4D68686C)
 
 // white
 val White500 = Color(0xFFF2F2F2)

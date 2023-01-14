@@ -1,5 +1,6 @@
 package com.highthon.dokgodie_android.presentation.feature_upload
 
+import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
@@ -15,12 +16,13 @@ import com.highthon.dokgodie_android.presentation.component.InputField
 import com.highthon.dokgodie_android.presentation.component.PretendardText
 import com.highthon.dokgodie_android.presentation.component.PrimaryButton
 import com.highthon.dokgodie_android.presentation.component.TopBar
+import com.highthon.dokgodie_android.presentation.feature_upload.component.AddVideoButton
 import com.highthon.dokgodie_android.presentation.feature_upload.component.VideoView
 import com.highthon.dokgodie_android.presentation.ui.theme.Black200
-import com.highthon.dokgodie_android.presentation.ui.theme.Gray500
+import com.highthon.dokgodie_android.presentation.ui.theme.White500
 
 @Composable
-fun UploadScreen() {
+fun UploadScreen(uri: Uri?, onClick: () -> Unit) {
     val productName = remember {
         mutableStateOf("")
     }
@@ -37,13 +39,21 @@ fun UploadScreen() {
 
         })
         Spacer(modifier = Modifier.size(8.dp))
-        VideoView(videoUri = "https://storage.googleapis.com/exoplayer-test-media-0/BigBuckBunny_320x180.mp4")
+        if (uri == null) {
+            AddVideoButton {
+                onClick()
+            }
+        } else {
+            VideoView(videoUri = uri) {
+                onClick()
+            }
+        }
         Spacer(modifier = Modifier.size(24.dp))
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(16.dp)
-                .background(Gray500)
+                .background(White500)
         )
         Spacer(modifier = Modifier.size(24.dp))
         Column {
