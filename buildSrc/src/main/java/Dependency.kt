@@ -4,6 +4,7 @@ object Dependency {
         const val ANDROID_LIBRARY = "com.android.library"
         const val KOTLIN = "org.jetbrains.kotlin.android"
         const val HILT = "com.google.dagger.hilt.android"
+        const val KAPT = "kapt"
     }
 
     object Compose {

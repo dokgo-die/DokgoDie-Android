@@ -2,7 +2,7 @@ plugins {
     id(Dependency.Grdle.ANDROID_APPLICATION)
     id(Dependency.Grdle.KOTLIN)
     id(Dependency.Grdle.HILT)
-    kotlin("kapt")
+    kotlin(Dependency.Grdle.KAPT)
 }
 
 android {
