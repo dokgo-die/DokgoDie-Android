@@ -22,6 +22,7 @@ val White600 = Color(0xFFFFFFFF)
 
 // primary
 val PrimaryColor = Color(0xFF37D781)
+val PrimarySub = Color(0xFFD5F7E5)
 val BackgroundPrimaryColor = Color(0xFFD5F7E5)
 
 // system

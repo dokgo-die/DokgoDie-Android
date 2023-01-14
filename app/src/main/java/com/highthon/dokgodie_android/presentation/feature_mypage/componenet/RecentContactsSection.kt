@@ -1,11 +1,14 @@
 package com.highthon.dokgodie_android.presentation.feature_mypage.componenet
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Alignment.Companion.TopStart
@@ -27,8 +30,17 @@ import com.highthon.dokgodie_android.presentation.ui.theme.PrimaryColor
 
 @Composable
 fun RecentContactSection(list: List<RecentContactsData>) {
+    val isDialogOn = remember {
+        mutableStateOf(false)
+    }
+
     LazyColumn {
         items(list.size) {
+            if (isDialogOn.value) {
+                DialogContent(list[it].userName, list[it].userProfile) {
+                    isDialogOn.value = false
+                }
+            }
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -84,7 +96,9 @@ fun RecentContactSection(list: List<RecentContactsData>) {
                     }
                 }
                 PretendardText(
-                    modifier = Modifier.align(CenterEnd),
+                    modifier = Modifier
+                        .align(CenterEnd)
+                        .clickable { isDialogOn.value = true },
                     text = "평가하기",
                     fontSize = 15.sp,
                     fontWeight = FontWeight(600),
