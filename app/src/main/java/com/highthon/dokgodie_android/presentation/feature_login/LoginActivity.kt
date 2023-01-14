@@ -70,8 +70,7 @@ class LoginActivity : ComponentActivity() {
                             onValueChange = {
                                 id.value = it
                             },
-                            errorMsg = "존재하지 않는 아이디에요.",
-                            isPassword = false
+                            errorMsg = "존재하지 않는 아이디에요."
                         )
                         Spacer(modifier = Modifier.size(16.dp))
                         PretendardText(

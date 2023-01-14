@@ -23,4 +23,5 @@ object Versions {
     const val OKHTTP = "3.14.9"
 
     const val COIL = "2.2.2"
+    const val EXOPLAYER = "2.18.1"
 }

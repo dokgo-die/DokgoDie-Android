@@ -73,4 +73,5 @@ dependencies {
     implementation(Dependency.Library.OKHTTP)
     implementation(Dependency.Library.OKHTTP_LOGGING_INTERCEPTOR)
     implementation(Dependency.Library.RETROFIT_CONVERTER_GSON)
+    implementation(Dependency.Library.EXOPLAYER)
 }
