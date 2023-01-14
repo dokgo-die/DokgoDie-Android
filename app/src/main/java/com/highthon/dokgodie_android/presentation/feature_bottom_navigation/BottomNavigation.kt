@@ -26,7 +26,8 @@ fun BottomNavigation(
     isMainPage: Boolean,
     modifier: Modifier = Modifier,
     onClickHomeButton: () -> Unit,
-    onClickMainButton: () -> Unit
+    onClickMainButton: () -> Unit,
+    onClickUploadButton: () -> Unit
 ) {
     Box(
         modifier = modifier
@@ -65,6 +66,12 @@ fun BottomNavigation(
                 .clip(CircleShape)
                 .background(if (isMainPage) White500 else PrimaryColor)
                 .align(Center)
+                .clickable(
+                    indication = null,
+                    interactionSource = MutableInteractionSource()
+                ) {
+                    onClickUploadButton()
+                }
         ) {
             Icon(
                 painter = painterResource(id = R.drawable.upload),
@@ -106,5 +113,5 @@ fun BottomNavigation(
 @Preview
 @Composable
 fun BottomNavigationPreview() {
-    BottomNavigation(isMainPage = false, onClickHomeButton = {}, onClickMainButton = {})
+    BottomNavigation(isMainPage = false, onClickHomeButton = {}, onClickMainButton = {}, onClickUploadButton = {})
 }
