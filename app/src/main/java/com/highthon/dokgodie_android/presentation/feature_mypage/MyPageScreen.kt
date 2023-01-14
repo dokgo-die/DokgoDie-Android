@@ -53,88 +53,88 @@ fun MyPageScreen() {
         RecentContactSection(
             list = listOf(
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "이현빈",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-                    grade = 4,
-                    theNumberOfGrader = 50
+                    grade = 3,
+                    theNumberOfGrader = 102
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "강민",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-                    grade = 4,
-                    theNumberOfGrader = 50
+                    grade = 5,
+                    theNumberOfGrader = 5022
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "김시훈",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
                     grade = 4,
-                    theNumberOfGrader = 50
+                    theNumberOfGrader = 2004
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "김준",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
                     grade = 4,
-                    theNumberOfGrader = 50
+                    theNumberOfGrader = 4000
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "최민재",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-                    grade = 4,
-                    theNumberOfGrader = 50
+                    grade = 5,
+                    theNumberOfGrader = 69283
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "이용진",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-                    grade = 4,
-                    theNumberOfGrader = 50
+                    grade = 5,
+                    theNumberOfGrader = 7000
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "임세현",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-                    grade = 4,
-                    theNumberOfGrader = 50
+                    grade = 5,
+                    theNumberOfGrader = 83949
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "김성길",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-                    grade = 4,
-                    theNumberOfGrader = 50
+                    grade = 3,
+                    theNumberOfGrader = 3
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "임가람",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
                     grade = 4,
-                    theNumberOfGrader = 50
+                    theNumberOfGrader = 263
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "전승원",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-                    grade = 4,
-                    theNumberOfGrader = 50
+                    grade = 2,
+                    theNumberOfGrader = 1315
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "심미진",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-                    grade = 4,
-                    theNumberOfGrader = 50
+                    grade = 5,
+                    theNumberOfGrader = 126351
                 ),
                 RecentContactsData(
-                    userName = "김현승",
+                    userName = "지인호",
                     userId = "gun._.tmd",
                     userProfile = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-                    grade = 4,
-                    theNumberOfGrader = 50
+                    grade = 3,
+                    theNumberOfGrader = 12431364
                 )
             )
         )

@@ -12,6 +12,7 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -155,13 +156,15 @@ fun HomeScreen() {
                     painter = painterResource(id = R.drawable.ic_link),
                     contentDescription = "link",
                     tint = White500,
-                    modifier = Modifier.clickable(
-                        indication = null,
-                        interactionSource = MutableInteractionSource()
-                    ) {
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(list[it].link))
-                        context.startActivity(intent)
-                    }
+                    modifier = Modifier
+                        .align(CenterHorizontally)
+                        .clickable(
+                            indication = null,
+                            interactionSource = MutableInteractionSource()
+                        ) {
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(list[it].link))
+                            context.startActivity(intent)
+                        }
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 PretendardText(
@@ -184,16 +187,18 @@ fun HomeScreen() {
                     painter = painterResource(id = R.drawable.send),
                     contentDescription = "send",
                     tint = White500,
-                    modifier = Modifier.clickable(
-                        indication = null,
-                        interactionSource = MutableInteractionSource()
-                    ) {
-                        val intent = Intent(
-                            Intent.ACTION_VIEW,
-                            Uri.parse("https://www.instagram.com/${list[it].userId}/")
-                        )
-                        context.startActivity(intent)
-                    })
+                    modifier = Modifier
+                        .align(CenterHorizontally)
+                        .clickable(
+                            indication = null,
+                            interactionSource = MutableInteractionSource()
+                        ) {
+                            val intent = Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("https://www.instagram.com/${list[it].userId}/")
+                            )
+                            context.startActivity(intent)
+                        })
                 Spacer(modifier = Modifier.height(2.dp))
                 PretendardText(
                     text = "채팅 요청",
@@ -211,12 +216,18 @@ fun HomeScreen() {
                         context.startActivity(intent)
                     })
             }
-            Row(modifier = Modifier.align(Alignment.BottomEnd).offset(x = -(30.dp), y = (-21).dp)) {
+            Row(
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .offset(x = -(30.dp), y = (-21).dp)
+            ) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_star_rate),
                     contentDescription = "star",
                     tint = White500,
-                    modifier = Modifier.size(10.dp).align(CenterVertically)
+                    modifier = Modifier
+                        .size(10.dp)
+                        .align(CenterVertically)
                 )
                 Spacer(modifier = Modifier.width(7.dp))
                 PretendardText(
@@ -230,7 +241,9 @@ fun HomeScreen() {
                     painter = painterResource(id = R.drawable.ic_person),
                     contentDescription = "people",
                     tint = White500,
-                    modifier = Modifier.size(10.dp).align(CenterVertically)
+                    modifier = Modifier
+                        .size(10.dp)
+                        .align(CenterVertically)
                 )
                 Spacer(modifier = Modifier.width(7.dp))
                 PretendardText(
