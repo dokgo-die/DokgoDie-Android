@@ -4,12 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.offset
-import androidx.compose.material.Icon
+import androidx.compose.foundation.layout.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -30,11 +28,17 @@ class IntroActivity : ComponentActivity() {
                 modifier = Modifier
                     .fillMaxSize()
             ) {
-                Icon(
-                    painter = painterResource(id = R.drawable.ic_launcher_background),
-                    contentDescription = "AppIcon",
-                    modifier = Modifier.align(Alignment.Center)
-                )
+                Row(modifier = Modifier.align(Alignment.Center)) {
+                    Image(
+                        painter = painterResource(id = R.drawable.quicket_logo_text),
+                        contentDescription = "LogoText"
+                    )
+                    Spacer(modifier = Modifier.size(12.dp))
+                    Image(
+                        painter = painterResource(id = R.drawable.quicket_logo),
+                        contentDescription = "Logo"
+                    )
+                }
                 PrimaryButton(
                     text = "새로운 계정으로 시작하기",
                     modifier = Modifier
