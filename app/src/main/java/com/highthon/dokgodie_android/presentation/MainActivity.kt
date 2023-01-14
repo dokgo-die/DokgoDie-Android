@@ -10,6 +10,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import com.highthon.dokgodie_android.presentation.feature_bottom_navigation.BottomNavigation
+import com.highthon.dokgodie_android.presentation.feature_home.HomeScreen
+import com.highthon.dokgodie_android.presentation.feature_mypage.MyPageScreen
 import com.highthon.dokgodie_android.presentation.ui.theme.DokgoDieAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.Bottom
                 ) {
                     Column(modifier = Modifier.weight(1f)) {
-
+                        if (isMainPage.value) HomeScreen() else MyPageScreen()
                     }
                     BottomNavigation(
                         isMainPage = isMainPage.value,
