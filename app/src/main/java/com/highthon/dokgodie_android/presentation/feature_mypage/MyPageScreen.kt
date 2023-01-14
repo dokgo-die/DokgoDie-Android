@@ -28,6 +28,8 @@ fun MyPageScreen() {
         )
         Spacer(modifier = Modifier.height(16.dp))
         MyInfoSection()
+        Spacer(modifier = Modifier.height(20.dp))
+
     }
 }
 

@@ -4,36 +4,41 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import coil.annotation.ExperimentalCoilApi
-import coil.compose.ImagePainter
-import coil.compose.rememberImagePainter
-import coil.transform.CircleCropTransformation
+import coil.compose.AsyncImage
+import coil.compose.rememberAsyncImagePainter
+import coil.request.ImageRequest
 
-@OptIn(ExperimentalCoilApi::class)
 @Composable
 fun ProfileThumbNail() {
     Row {
-        val painter = rememberImagePainter(
-            data = "https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png",
-            builder = {
-                transformations(
-                    CircleCropTransformation()
-                )
-            })
-        val imageStage = painter.state
+//        AsyncImage(
+//            model = ImageRequest.Builder(LocalContext.current)
+//                .data("https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png")
+//                .crossfade(true)
+//                .build(),
+////            placeholder = painterResource(R.drawable.placeholder),
+//            contentDescription = "theProfileImageOfUser",
+//            contentScale = ContentScale.Crop,
+//            modifier = Modifier
+//                .clip(CircleShape)
+//                .height(60.dp)
+//                .width(60.dp)
+//        )
         Image(
-            painter = painter,
-            contentDescription = "userProfile",
+            painter = rememberAsyncImagePainter("https://test-imag-upload-bucket.s3.ap-northeast-2.amazonaws.com/image.png"),
+            contentDescription = "theProfileImageOfUser",
+            contentScale = ContentScale.Crop,
             modifier = Modifier
+                .clip(CircleShape)
                 .height(60.dp)
                 .width(60.dp)
         )
-        if(imageStage is ImagePainter.State.Loading) {
-            CircularProgressIndicator()
-        }
     }
 }
