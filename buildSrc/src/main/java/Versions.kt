@@ -1,4 +1,8 @@
 object Versions {
+    const val COMPILESDK = 32
+    const val TARGETSDK = 32
+    const val MINSDK = 24
+
     const val ANDROID = "7.3.0"
     const val KOTLIN = "1.6.10"
 

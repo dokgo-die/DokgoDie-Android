@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.highthon.dokgodie_android"
-    compileSdk = 32
+    compileSdk = Versions.COMPILESDK
 
     defaultConfig {
         applicationId = "com.highthon.dokgodie_android"
-        minSdk = 24
-        targetSdk = 32
+        minSdk = Versions.MINSDK
+        targetSdk = Versions.TARGETSDK
         versionCode = 1
         versionName = "1.0"
 
