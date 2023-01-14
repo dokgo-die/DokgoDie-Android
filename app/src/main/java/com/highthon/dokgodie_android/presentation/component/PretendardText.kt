@@ -15,7 +15,7 @@ fun PretendardText(
     fontSize: TextUnit,
     fontWeight: FontWeight,
     color: Color,
-    modifier: Modifier
+    modifier: Modifier = Modifier
 ) {
     Text(
         text = text, style = TextStyle(
