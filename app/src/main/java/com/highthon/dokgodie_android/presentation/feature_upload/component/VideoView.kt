@@ -21,6 +21,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.Player
+import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import com.google.android.exoplayer2.ui.StyledPlayerView
 import com.highthon.dokgodie_android.presentation.component.PretendardText
 import com.highthon.dokgodie_android.presentation.ui.theme.Gray300
@@ -30,8 +32,7 @@ import com.highthon.dokgodie_android.presentation.ui.theme.White500
 @Composable
 fun VideoView(videoUri: Uri, onClick: () -> Unit) {
     val context = LocalContext.current
-
-    val exoPlayer = ExoPlayer.Builder(LocalContext.current)
+    val exoPlayer = ExoPlayer.Builder(context)
         .build()
         .also { exoPlayer ->
             val mediaItem = MediaItem.Builder()
@@ -48,14 +49,20 @@ fun VideoView(videoUri: Uri, onClick: () -> Unit) {
     ) {
         DisposableEffect(
             AndroidView(modifier = Modifier
-                .background(White500)
-                .clickable { onClick() }, factory = {
+                .background(White500), factory = {
                 StyledPlayerView(context).apply {
                     player = exoPlayer
+                    resizeMode = AspectRatioFrameLayout.RESIZE_MODE_FILL
+                    useController = false
+                    player!!.prepare()
+                    player!!.playWhenReady = true
+                    player!!.repeatMode = Player.REPEAT_MODE_ALL
                 }
             })
         ) {
-            onDispose { exoPlayer.release() }
+            onDispose {
+                exoPlayer.release()
+            }
         }
         Box(
             modifier = Modifier
@@ -69,7 +76,9 @@ fun VideoView(videoUri: Uri, onClick: () -> Unit) {
                     shape = RoundedCornerShape(16.dp)
                 )
                 .background(TransparentGray300)
-                .clickable { onClick() }
+                .clickable {
+                    onClick()
+                }
         ) {
             PretendardText(
                 text = "영상 재업로드",

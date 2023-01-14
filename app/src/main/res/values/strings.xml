@@ -2,4 +2,5 @@
     <string name="app_name">DokgoDie-Android</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_intro">IntroActivity</string>
+    <string name="title_activity_upload">UploadActivity</string>
 </resources>
