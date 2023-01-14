@@ -1,4 +1,4 @@
-package com.highthon.dokgodie_android
+package com.highthon.dokgodie_android.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.highthon.dokgodie_android.ui.theme.DokgoDieAndroidTheme
+import com.highthon.dokgodie_android.presentation.ui.theme.DokgoDieAndroidTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

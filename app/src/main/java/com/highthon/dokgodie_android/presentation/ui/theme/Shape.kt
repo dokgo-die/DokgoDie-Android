@@ -1,4 +1,4 @@
-package com.highthon.dokgodie_android.ui.theme
+package com.highthon.dokgodie_android.presentation.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
