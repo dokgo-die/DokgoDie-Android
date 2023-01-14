@@ -21,4 +21,6 @@ object Versions {
 
     const val RETROFIT = "2.7.1"
     const val OKHTTP = "3.14.9"
+
+    const val COIL = "2.2.2"
 }
