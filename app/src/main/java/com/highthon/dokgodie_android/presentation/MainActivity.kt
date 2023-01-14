@@ -3,41 +3,34 @@ package com.highthon.dokgodie_android.presentation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.highthon.dokgodie_android.presentation.feature_bottom_navigation.BottomNavigation
 import com.highthon.dokgodie_android.presentation.ui.theme.DokgoDieAndroidTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            val isMainPage = remember { mutableStateOf(true) }
             DokgoDieAndroidTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
+                Column(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
+                    verticalArrangement = Arrangement.Bottom
                 ) {
-                    Greeting("Android")
+                    Column(modifier = Modifier.weight(1f)) {
+
+                    }
+                    BottomNavigation(
+                        isMainPage = isMainPage.value,
+                        onClickHomeButton = { isMainPage.value = true },
+                        onClickMainButton = { isMainPage.value = false })
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    DokgoDieAndroidTheme {
-        Greeting("Android")
     }
 }
