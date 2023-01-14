@@ -35,9 +35,9 @@ fun InputField(
     text: String,
     hint: String,
     onValueChange: (String) -> Unit,
-    isError: Boolean,
-    errorMsg: String,
-    isPassword: Boolean
+    isError: Boolean = false,
+    errorMsg: String = "",
+    isPassword: Boolean = false
 ) {
     val passwordVisible = remember {
         mutableStateOf(isPassword)
