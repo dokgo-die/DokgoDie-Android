@@ -67,6 +67,7 @@ dependencies {
     debugImplementation(Dependency.ComposeTest.COMPOSE_TOOLING)
     debugImplementation(Dependency.ComposeTest.COMPOSE_MANIFEST)
     implementation(Dependency.Library.HILT)
+    implementation(Dependency.Library.COIL)
     kapt(Dependency.Library.HILT_COMPILER)
     implementation(Dependency.Library.RETROFIT)
     implementation(Dependency.Library.OKHTTP)
