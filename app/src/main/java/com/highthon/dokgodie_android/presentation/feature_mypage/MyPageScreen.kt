@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.highthon.dokgodie_android.presentation.component.TopBar
+import com.highthon.dokgodie_android.presentation.feature_mypage.componenet.GradeOfUser
 import com.highthon.dokgodie_android.presentation.feature_mypage.componenet.MyInfoSection
 import com.highthon.dokgodie_android.presentation.ui.theme.White600
 
@@ -29,7 +30,7 @@ fun MyPageScreen() {
         Spacer(modifier = Modifier.height(16.dp))
         MyInfoSection()
         Spacer(modifier = Modifier.height(20.dp))
-
+        GradeOfUser()
     }
 }
 
