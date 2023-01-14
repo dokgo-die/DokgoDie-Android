@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.highthon.dokgodie_android.presentation.MainActivity
 import com.highthon.dokgodie_android.presentation.component.InputField
 import com.highthon.dokgodie_android.presentation.component.PretendardText
 import com.highthon.dokgodie_android.presentation.component.PrimaryButton
@@ -98,7 +99,16 @@ class LoginActivity : ComponentActivity() {
                             .align(Alignment.BottomCenter)
                             .offset(y = (-20).dp)
                     ) {
-
+                        if (id.value == "test123" && password.value == "test123") {
+                            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                            finish()
+                        } else if (id.value != "test123" && password.value == "test123") {
+                            idError.value = true
+                            passwordError.value = false
+                        } else if (id.value == "test123" && password.value != "test123") {
+                            passwordError.value = true
+                            idError.value = false
+                        }
                     }
                 }
             }
