@@ -6,3 +6,22 @@ val Purple200 = Color(0xFFBB86FC)
 val Purple500 = Color(0xFF6200EE)
 val Purple700 = Color(0xFF3700B3)
 val Teal200 = Color(0xFF03DAC5)
+
+// black
+val Black100 = Color(0xFF1D1D21)
+val Black200 = Color(0xFF2C2C30)
+
+// gray
+val Gray300 = Color(0xFF68686C)
+val Gray400 = Color(0xFFCCCCD6)
+
+// write
+val Write500 = Color(0xFFF2F2F2)
+val Write600 = Color(0xFFFFFFFF)
+
+// primary
+val PrimaryColor = Color(0xFF37D781)
+val BackgroundPrimaryColor = Color(0xFFD5F7E5)
+
+// system
+val ErrorColor = Color(0xFFF81C1C)
